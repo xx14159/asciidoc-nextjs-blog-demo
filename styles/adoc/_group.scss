@@ -1,0 +1,56 @@
+.adoc-extend {
+  .openblock.group {
+    &.extend {
+      @screen sm {
+        transform: translateX(-50%);
+        @apply [--adoc-pl:2rem] [--adoc-pr:2rem];
+        @apply tw-clear-both tw-ml-[50%] tw-mr-0 tw-w-screen tw-max-w-[1920px] tw-pl-[--adoc-pl] tw-pr-[--adoc-pr];
+
+        &.max-lg {
+          @apply tw-max-w-screen-lg;
+        }
+
+        &.max-xl {
+          @apply tw-max-w-screen-xl;
+        }
+
+        &.max-2xl {
+          @apply tw-max-w-screen-2xl;
+        }
+      }
+
+      @screen md {
+        @apply [--adoc-pl:3rem] [--adoc-pr:3rem];
+      }
+
+      @screen lg {
+        @apply tw-ml-[29rem] tw-mr-0;
+      }
+
+      @screen xl {
+        &:not(.max-lg) {
+          @apply [--adoc-pl:4rem] [--adoc-pr:4rem];
+        }
+      }
+    }
+
+    &.side {
+      @screen lg {
+        @apply [--adoc-pl:0px];
+        @apply tw-float-right tw-clear-right tw-my-4 tw--mr-64 tw-ml-8 tw-max-w-xl;
+
+        &:first-child {
+          @apply tw-mt-4;
+        }
+
+        &:last-child {
+          @apply tw-mb-4;
+        }
+
+        &.thin {
+          @apply tw-max-w-[14rem];
+        }
+      }
+    }
+  }
+}

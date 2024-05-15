@@ -1,0 +1,16 @@
+html {
+  font-size: 16px;
+  @apply tw-overflow-x-hidden;
+}
+
+body {
+  text-rendering: geometricPrecision;
+}
+
+iframe {
+  @apply tw-aspect-video tw-h-auto tw-max-w-full;
+}
+
+:focus-visible {
+  outline: auto;
+}

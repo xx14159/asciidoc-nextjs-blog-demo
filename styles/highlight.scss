@@ -1,0 +1,118 @@
+.hljs {
+  &,
+  &-subst {
+    color: theme("colors.gray.900");
+  }
+
+  &-keyword,
+  &-section,
+  &-addition {
+    color: theme("colors.red.600");
+  }
+
+  &-built_in,
+  &-attr,
+  &-selector-class,
+  &-selector-attr {
+    color: theme("colors.amber.600");
+  }
+
+  &-type,
+  &-name,
+  &-selector-tag {
+    color: theme("colors.purple.700");
+  }
+
+  &-literal,
+  &-attribute {
+    color: theme("colors.sky.700");
+  }
+
+  &-number {
+    color: theme("colors.rose.700");
+  }
+
+  &-operator,
+  &-punctuation,
+  &-tag,
+  &-bullet {
+    color: theme("colors.cyan.600");
+  }
+
+  &-property {
+    color: theme("colors.emerald.700");
+  }
+
+  &-regexp,
+  &-string {
+    color: theme("colors.lime.700");
+  }
+
+  &-char.escape_,
+  &-params {
+    color: theme("colors.teal.600");
+  }
+
+  &-symbol,
+  &-variable.language_,
+  &-code,
+  &-selector-pseudo {
+    color: theme("colors.pink.600");
+  }
+
+  &-variable,
+  &-template-variable,
+  &-deletion {
+    color: theme("colors.green.700");
+  }
+
+  &-title,
+  &-selector-id {
+    color: theme("colors.blue.700");
+  }
+
+  &-title.class_ {
+    color: theme("colors.orange.600");
+  }
+
+  &-comment {
+    color: theme("colors.gray.500");
+  }
+
+  &-doctag {
+    color: theme("colors.red.700");
+  }
+
+  &-meta {
+    color: theme("colors.blue.800");
+
+    &.prompt_ {
+      color: theme("colors.blue.600");
+    }
+  }
+
+  &-emphasis {
+    @apply tw-italic;
+  }
+
+  &-strong {
+    font-weight: var(--adoc-fw-bold);
+  }
+
+  &-formula {
+    color: theme("colors.fuchsia.600");
+  }
+
+  &-link {
+    color: theme("colors.indigo.700");
+    @apply tw-underline;
+  }
+
+  &-quote {
+    color: theme("colors.stone.700");
+  }
+
+  &-template-tag {
+    color: theme("colors.yellow.600");
+  }
+}

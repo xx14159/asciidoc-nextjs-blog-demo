@@ -1,0 +1,47 @@
+.font-icon {
+  font-size: 1.25em;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  @apply tw-font-icon tw-inline-block tw-select-none tw-whitespace-nowrap tw-break-normal tw-align-[-0.2em] tw-normal-case tw-not-italic tw-leading-none tw-tracking-normal;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.neutral.300") transparent;
+
+  &::-webkit-scrollbar {
+    @apply tw-h-1.5 tw-w-1.5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: theme("colors.neutral.300");
+
+    &:hover {
+      background-color: theme("colors.neutral.400");
+    }
+
+    &:active {
+      background-color: theme("colors.neutral.500");
+    }
+  }
+}
+
+.bg-from-bottom {
+  background-size: 100% 0;
+  @apply tw-bg-bottom tw-bg-no-repeat;
+
+  &:hover,
+  &:focus {
+    background-size: 100% 100%;
+  }
+}
+
+.bg-from-left {
+  background-size: 0 100%;
+  @apply tw-bg-left tw-bg-no-repeat;
+
+  &:hover,
+  &:focus {
+    background-size: 100% 100%;
+  }
+}

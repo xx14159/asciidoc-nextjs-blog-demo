@@ -1,0 +1,11 @@
+[workspace]
+members = ["scripts/font-subset" ,"wasm/*"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

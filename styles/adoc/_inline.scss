@@ -1,0 +1,466 @@
+// Inline
+
+@mixin font-weight-mixin($w1, $w2) {
+  --adoc-fw-bold: #{$w2};
+  font-weight: #{$w1};
+}
+
+.adoc {
+  @apply tw-text-base tw-leading-relaxed md:tw-text-[17px];
+
+  /// Quoted Text
+
+  b,
+  strong,
+  img,
+  .bold {
+    font-weight: var(--adoc-fw-bold);
+  }
+
+  cite,
+  em,
+  i,
+  .italic {
+    @apply tw-italic;
+  }
+
+  :not(pre) > code {
+    background-color: theme("colors.gray.100");
+    @apply tw-px-[0.4em] tw-py-[0.2em] tw-text-[85%] tw-not-italic tw-leading-[0] tw-mix-blend-multiply;
+    @extend .font-mono;
+
+    &.plain {
+      background-color: theme("colors.transparent");
+      @apply tw-p-0 tw-mix-blend-normal;
+    }
+  }
+
+  mark {
+    background-image: linear-gradient(#ff0, #ff0);
+    background-size: 100% 40%;
+    @apply tw-bg-transparent tw-bg-bottom tw-bg-no-repeat tw-text-inherit;
+  }
+
+  //// Quoted text attribute
+
+  .underline {
+    @apply tw-underline tw-decoration-from-font;
+  }
+
+  .overline {
+    @apply tw-overline tw-decoration-from-font;
+  }
+
+  .line-through {
+    @apply tw-line-through tw-decoration-from-font;
+  }
+
+  .nobreak {
+    hyphens: none;
+    @apply tw-break-normal;
+  }
+
+  .nowrap:not(pre) {
+    @apply tw-whitespace-nowrap;
+  }
+
+  .pre-wrap:not(pre) {
+    @apply tw-whitespace-pre-wrap;
+  }
+
+  /* font-size */
+
+  .small {
+    @apply tw-text-[smaller];
+  }
+
+  .big {
+    @apply tw-text-[larger];
+  }
+
+  /* font-family */
+
+  --adoc-ff: theme(fontFamily.serif);
+  --adoc-ff-cjk: theme(fontFamily.cjk-serif);
+  font-family: var(--adoc-ff);
+
+  &:is(:lang(zh), :lang(ja), :lang(ko)) {
+    font-family: var(--adoc-ff-cjk);
+  }
+
+  [lang] {
+    font-family: var(--adoc-ff);
+  }
+
+  [lang]:is(:lang(zh), :lang(ja), :lang(ko)) {
+    font-family: var(--adoc-ff-cjk);
+  }
+
+  .font {
+    &-sans {
+      --adoc-ff: theme(fontFamily.sans);
+      --adoc-ff-cjk: theme(fontFamily.cjk-sans);
+      font-family: var(--adoc-ff);
+
+      &:is(:lang(zh), :lang(ja), :lang(ko)) {
+        font-family: var(--adoc-ff-cjk);
+      }
+    }
+
+    &-serif {
+      --adoc-ff: theme(fontFamily.serif);
+      --adoc-ff-cjk: theme(fontFamily.cjk-serif);
+      font-family: var(--adoc-ff);
+
+      &:is(:lang(zh), :lang(ja), :lang(ko)) {
+        font-family: var(--adoc-ff-cjk);
+      }
+    }
+
+    &-mono {
+      @apply tw-font-mono;
+    }
+
+    &-icon {
+      direction: ltr;
+      text-rendering: optimizeLegibility;
+      @apply tw-font-icon tw-inline-block tw-select-none tw-whitespace-nowrap tw-break-normal tw-align-[-0.2em] tw-normal-case tw-not-italic tw-leading-none tw-tracking-normal;
+    }
+  }
+
+  /* font-weight */
+
+  @include font-weight-mixin(400, 700);
+
+  .font {
+    &-light {
+      @include font-weight-mixin(300, 600);
+    }
+
+    &-normal {
+      @include font-weight-mixin(400, 700);
+    }
+
+    &-semibold {
+      @include font-weight-mixin(600, 900);
+    }
+
+    &-bold {
+      @include font-weight-mixin(700, 900);
+    }
+  }
+
+  /* font-variant */
+
+  .small-caps {
+    font-variant-caps: small-caps;
+  }
+
+  .oldstyle-nums {
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* color */
+
+  --adoc-link-color: theme("colors.indigo.700");
+  --adoc-link-color-other: theme("colors.indigo.900");
+  color: theme("colors.gray.900");
+
+  .transparent {
+    &:not(a) {
+      color: theme("colors.transparent");
+    }
+
+    &-link {
+      --adoc-link-color: theme("colors.transparent");
+      --adoc-link-color-other: theme("colors.transparent");
+    }
+  }
+
+  .black {
+    &-background {
+      background-color: theme("colors.black");
+    }
+
+    &:not(a) {
+      color: theme("colors.black");
+    }
+
+    &-mark {
+      background-image: linear-gradient(
+        theme("colors.black"),
+        theme("colors.black")
+      );
+      background-size: 100% 35%;
+      @apply tw-bg-bottom tw-bg-no-repeat;
+    }
+  }
+
+  .white {
+    &-background {
+      background-color: theme("colors.white");
+    }
+
+    &-mark {
+      background-image: linear-gradient(
+        theme("colors.white"),
+        theme("colors.white")
+      );
+      background-size: 100% 35%;
+      @apply tw-bg-bottom tw-bg-no-repeat;
+    }
+  }
+
+  $-grays: "slate", "gray", "zinc", "neutral", "stone";
+  @each $gray in $-grays {
+    .light-#{$gray}-bg {
+      background-color: theme(#{"colors.#{$gray}.50"});
+    }
+
+    .#{$gray}-bg {
+      background-color: theme(#{"colors.#{$gray}.100"});
+    }
+
+    .dark-#{$gray}-bg {
+      background-color: theme(#{"colors.#{$gray}.200"});
+    }
+
+    .#{$gray}:not(a) {
+      color: theme(#{"colors.#{$gray}.700"});
+    }
+
+    .dark-#{$gray}:not(a) {
+      color: theme(#{"colors.#{$gray}.900"});
+    }
+
+    .#{$gray}-link {
+      --adoc-link-color: theme(#{"colors.#{$gray}.700"});
+      --adoc-link-color-other: theme(#{"colors.#{$gray}.900"});
+    }
+
+    .#{$gray}-mark {
+      background-image: linear-gradient(
+        theme(#{"colors.#{$gray}.300"}),
+        theme(#{"colors.#{$gray}.300"})
+      );
+      background-size: 100% 35%;
+      @apply tw-bg-bottom tw-bg-no-repeat;
+    }
+  }
+
+  $-colors: "red", "orange", "amber", "yellow", "lime", "green", "emerald",
+    "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia",
+    "pink", "rose";
+
+  @each $color in $-colors {
+    .light-#{$color}-bg {
+      background-color: theme(#{"colors.#{$color}.50"});
+    }
+
+    .#{$color}-bg {
+      background-color: theme(#{"colors.#{$color}.100"});
+    }
+
+    .dark-#{$color}-bg {
+      background-color: theme(#{"colors.#{$color}.200"});
+    }
+
+    .#{$color}:not(a) {
+      color: theme(#{"colors.#{$color}.600"});
+    }
+
+    .dark-#{$color}:not(a) {
+      color: theme(#{"colors.#{$color}.800"});
+    }
+
+    .#{$color}-link {
+      --adoc-link-color: theme(#{"colors.#{$color}.700"});
+      --adoc-link-color-other: theme(#{"colors.#{$color}.900"});
+    }
+
+    .#{$color}-mark {
+      background-image: linear-gradient(
+        theme(#{"colors.#{$color}.300"}),
+        theme(#{"colors.#{$color}.300"})
+      );
+      background-size: 100% 35%;
+      @apply tw-bg-bottom tw-bg-no-repeat;
+    }
+  }
+
+  /// Superscript and Subscript
+
+  %sub-or-sup {
+    @apply tw-relative tw-align-baseline tw-text-[75%] tw-leading-[0];
+  }
+
+  sub {
+    @apply tw-bottom-[-0.25em];
+    @extend %sub-or-sup;
+  }
+
+  sup {
+    @apply tw-top-[-0.5em];
+    @extend %sub-or-sup;
+  }
+
+  /// Link
+
+  a {
+    color: var(--adoc-link-color);
+    border-color: var(--adoc-link-color);
+
+    &:hover {
+      color: var(--adoc-link-color-other);
+      border-color: var(--adoc-link-color-other);
+    }
+
+    &.bare {
+      @apply tw-border-b tw-border-dotted hover:tw-border-solid;
+    }
+
+    &[target="_blank"]:not(.image),
+    &.external {
+      &::after {
+        color: theme("colors.gray.700");
+        content: "\e89e";
+        @apply tw-align-[0.2em] tw-text-[93.75%];
+        @extend .font-icon;
+      }
+    }
+  }
+
+  /// Icon
+
+  .fa {
+    @apply tw-text-[1.25em];
+    @extend .font-icon;
+
+    &[data-target] {
+      &::before {
+        content: attr(data-target);
+      }
+    }
+
+    &-xs {
+      @apply tw-text-[0.75em];
+    }
+    &-sm {
+      @apply tw-text-[1em];
+    }
+    &-lg {
+      @apply tw-text-[1.5em];
+    }
+    &-xl {
+      @apply tw-text-[1.75em];
+    }
+    &-2x {
+      @apply tw-text-[2em];
+    }
+    &-3x {
+      @apply tw-text-[3em];
+    }
+    &-4x {
+      @apply tw-text-[4em];
+    }
+    &-5x {
+      @apply tw-text-[5em];
+    }
+
+    &-rotate {
+      &-90 {
+        transform: rotate(90deg);
+      }
+      &-180 {
+        transform: rotate(180deg);
+      }
+      &-270 {
+        transform: rotate(270deg);
+      }
+    }
+
+    &-flip {
+      &-horizontal {
+        transform: scale(-1, 1);
+      }
+      &-vertical {
+        transform: scale(1, -1);
+      }
+    }
+
+    &-angle-right {
+      @apply tw-mx-[-0.25em];
+
+      &::before {
+        content: "\e315";
+      }
+    }
+  }
+
+  /// Keyboard
+
+  kbd {
+    background-color: theme("colors.gray.50");
+    border-color: theme("colors.gray.400");
+    box-shadow: 0 1px rgba(0, 0, 0, 0.25);
+    @apply tw-mx-[0.15em] tw-whitespace-nowrap tw-rounded-[0.25em] tw-border tw-px-[0.5em] tw-py-[0.25em] tw-text-[75%] tw-not-italic tw-leading-[0];
+    @extend .font-mono;
+  }
+
+  .keyseq {
+    @apply tw-text-[75%] tw-leading-[0];
+
+    > kbd {
+      font-size: inherit;
+
+      &:first-child {
+        @apply tw-ml-0;
+      }
+
+      &:last-child {
+        @apply tw-mr-0;
+      }
+    }
+  }
+
+  /// Button
+
+  .button {
+    &::before {
+      content: "[";
+      @apply tw-pl-[0.1em] tw-pr-[0.2em];
+    }
+
+    &::after {
+      content: "]";
+      @apply tw-pl-[0.2em] tw-pr-[0.1em];
+    }
+  }
+
+  /// Image
+
+  img {
+    @apply tw-flex tw-flex-row tw-items-center tw-justify-center tw-object-cover tw-object-center tw-text-center tw-uppercase;
+  }
+
+  .image {
+    @apply tw-inline-block;
+
+    &.left,
+    &.right {
+      @apply tw-my-4 tw-max-w-[calc(50%-1rem)];
+    }
+
+    &.left {
+      @apply tw-float-left tw-clear-left tw-mr-4;
+    }
+
+    &.right {
+      @apply tw-float-right tw-clear-right tw-ml-4;
+    }
+  }
+}

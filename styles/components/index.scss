@@ -1,0 +1,38 @@
+span.lazyload-img-wrapper {
+  @apply tw-inline-block;
+}
+.lazyload-img-wrapper {
+  @apply tw-relative;
+
+  > .overlay {
+    @apply tw-pointer-events-none tw-absolute tw-inset-0 tw-rounded-[inherit] tw-backdrop-blur-lg tw-transition-[backdrop-filter] tw-duration-300;
+  }
+
+  > .blur-up.lazyloaded + .overlay {
+    @apply tw-backdrop-blur-0;
+  }
+}
+
+.loading {
+  @apply tw-relative;
+
+  &::after {
+    content: "";
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCI+PHBhdGggZD0iTTQgMTJBOCA4IDAgMCAwIDIwIDEyQTguMiA4LjIgMCAwIDEgNCAxMiIgZmlsbD0iIzM3NDE1MSI+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMTIgMTIiIHRvPSIzNjAgMTIgMTIiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvcGF0aD48L3N2Zz4=");
+    @apply tw-absolute tw-inset-0 tw-cursor-default tw-rounded-[inherit] tw-bg-white/30 tw-bg-center tw-bg-no-repeat tw-backdrop-blur tw-transition-[background-color,opacity,backdrop-filter] tw-duration-300;
+  }
+
+  &.loaded::after {
+    @apply tw-pointer-events-none tw-cursor-auto tw-bg-transparent tw-opacity-0 tw-backdrop-blur-0;
+  }
+}
+
+input.plain-number-input[type="number"] {
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}

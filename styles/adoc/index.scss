@@ -1,0 +1,11 @@
+@use "layout";
+@use "section";
+@use "block";
+@use "group";
+@use "misc";
+@use "inline";
+
+.adoc-container {
+  @apply [--adoc-pl:1rem] [--adoc-pr:1rem] sm:[--adoc-pl:2rem] sm:[--adoc-pr:2rem] md:[--adoc-pl:3rem] md:[--adoc-pr:3rem];
+  @apply tw-relative tw-min-w-[320px] tw-max-w-screen-md tw-px-4 sm:tw-pl-[--adoc-pl] sm:tw-pr-[--adoc-pr];
+}

@@ -1,0 +1,21 @@
+.cm-editor {
+  @apply tw-rounded-lg tw-text-[0.875rem] tw-font-normal;
+
+  &,
+  & .cm-scroller,
+  & .cm-tooltip.cm-tooltip-autocomplete > ul {
+    @apply tw-font-mono;
+  }
+
+  &.cm-focused {
+    @apply tw-outline-none;
+  }
+
+  .cm-scroller {
+    @apply tw-overflow-auto tw-overscroll-contain tw-px-3 tw-py-2;
+  }
+
+  .cm-gutters {
+    @apply tw-select-none;
+  }
+}
