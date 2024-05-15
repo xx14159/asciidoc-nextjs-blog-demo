@@ -1,0 +1,16 @@
+{
+  "name": "analemma-helpers",
+  "version": "0.1.0",
+  "files": [
+    "analemma_helpers_bg.wasm",
+    "analemma_helpers.js",
+    "analemma_helpers_bg.js",
+    "analemma_helpers.d.ts"
+  ],
+  "module": "analemma_helpers.js",
+  "types": "analemma_helpers.d.ts",
+  "sideEffects": [
+    "./analemma_helpers.js",
+    "./snippets/*"
+  ]
+}
