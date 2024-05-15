@@ -269,7 +269,6 @@ export const doc2Post = (
       dash = "—";
     }
     el.innerHTML = el.innerHTML.replace(/(?<=^\n)— /, dash);
-    console.log(el.innerHTML);
   });
   const html = ctx.adaptor.innerHTML(ctx.adaptor.body(mathHtml.document));
   const mathjaxStyles = noMath

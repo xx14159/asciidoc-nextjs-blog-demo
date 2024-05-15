@@ -34,7 +34,7 @@ const projects = [
     link: "/projects/asciidoc-post-preview",
     description: "Customized AsciiDoc parser for post previewing",
     color: colors.gray[300],
-    showInProduction: false,
+    showInProduction: true,
   },
 ];
 
