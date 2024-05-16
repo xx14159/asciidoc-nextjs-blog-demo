@@ -47,6 +47,13 @@ const Page = async () => {
   return (
     <div className="tw-mx-auto tw-grid tw-max-w-screen-lg tw-grid-cols-1 tw-gap-y-16 tw-pb-32 tw-pt-16">
       <article>
+        <p className="tw-px-4 tw-font-serif tw-text-base tw-font-normal tw-leading-relaxed tw-text-gray-900 sm:tw-px-8 md:tw-px-12">
+          👋Hi! This is a demo website showcasing a blog built with Next.js and
+          AsciiDoc as the underlying markup language.
+        </p>
+      </article>
+
+      <article>
         <HrTitle>POSTS</HrTitle>
 
         <PostList

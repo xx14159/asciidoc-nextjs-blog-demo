@@ -1,0 +1,81 @@
+= May 2024 solar storms:: 本文仅用于测试排版
+Wikipedia
+:page-public:
+:page-tags: typesetting
+:page-heading-style: hr
+
+A series of powerful solar storms with intense to extreme solar flare and geomagnetic storm components have been ongoing since 10 May 2024 during solar cycle 25. The geomagnetic storm was the most powerful to affect Earth since October 2003, and produced aurorae at far lower latitudes than usual in both the northern and southern hemispheres.
+
+== Solar flares and coronal mass ejections
+
+[.group.side.thin]
+--
+.Aurora borealis as photographed from Viola, Arkansas (36°N, 46°N)
+image::https://upload.wikimedia.org/wikipedia/commons/d/db/May_10_2024_Aurorae_from_Arkansas.jpg[,250,250]
+--
+
+On 8 May 2024, a solar active region which had been assigned the NOAA region number 13664 (usually abbreviated as 3664) produced an X1.0-class and multiple M-class solar flares and launched several coronal mass ejections (CMEs) toward Earth. On 9 May, the active region produced an X2.25- and X1.12-class flare each associated with a full-halo CME. On 10 May, the region produced an X3.98-class flare, and on 11 May at 01:23 UTC it produced another X-class flare of magnitude 5.4–5.7 with another asymmetrical full-halo CME. The region also caused an S1 solar radiation storm with spikes reaching S2. On May 14, as the most active region 3664 rotated beyond the sun's western limb, the strongest flare occurred, an X8.7, causing level R3 (strong) radio blackouts.
+
+== Geomagnetic storm
+
+.Values of the three-hour Kp-index from 06z 10 May to 06z 14 May 2024
+[.left]
+image::https://upload.wikimedia.org/wikipedia/commons/f/fb/10-14May2024KpIndex.png[,360,240]
+
+Because the interplanetary magnetic field reached a magnitude of 73 nT (nanotesla) with the component along Earth's magnetic axis oriented strongly south, reaching as much as −50 nT, as well as because of moderately high solar wind density, and solar wind speed reaching 750–800 km/s (470–500 mi/s) between 11–12 May (UTC time), the event was classified as a G5-class geomagnetic storm (Kp=9), making it the most intense storm since the 2003 Halloween solar storms. Several other CMEs were expected to reach Earth on 11 and 12 May.
+
+=== Comparison to other geomagnetic storms
+
+The disturbance storm time index (Dst index) is a measure in the context of space weather. A negative Dst index means that Earth's magnetic field is weakened. This is particularly the case during solar storms, with a higher negative Dst index indicating a stronger solar storm. 
+
+The 2003 Halloween solar storms had a peak Dst index of −422 nT, while the March 1989 geomagnetic storm had a peak Dst index of −589 nT. The May 1921 geomagnetic storm has been estimated to have had a Dst index of −907±132 nT. Estimates for the Dst index of the Carrington Event superstorm of 1859 are between −800 nT and −1750 nT.
+
+The May 2024 solar storms reached a maximum Dst index of −412 nT on 11 May.
+
+== Aurora sightings
+
+Three CMEs from 8 May reached Earth on 10 May 2024, causing severe to extreme geomagnetic storms with bright and very long-lasting aurorae.
+
+In Asia, aurorae could be seen from Japan, the remote village of Hanle in northern India, and near the cities of Urumqi and Beijing in China.
+
+In Europe, aurorae were seen from as far south as Cyprus, Portugal, and Spain. Aurorae were also visible in Algeria and the Canary Islands in Africa.
+
+In North America, aurorae were seen as far south as the Florida Keys, the Yucatán Peninsula in Mexico, The Bahamas, and Puerto Rico. The aurora was also seen in Hawaii.
+
+In the Southern Hemisphere, the aurora was seen in New Zealand, Chile, Argentina, South Africa, and as far north as Uruguay, Namibia, and Mackay in Queensland, Australia.
+
+[.gallery]
+--
+.Glow aurora seen in Quillón, Chile
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Aurora_austral.jpg/1024px-Aurora_austral.jpg[,1024,576]
+
+.Patch aurora seen in Elbe-Parey, Germany
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2024-05-10%2C_22-25_Aurora%2C_Parey.jpg/1024px-2024-05-10%2C_22-25_Aurora%2C_Parey.jpg[1024,618]
+
+.Arc aurora seen in County Down, Northern Ireland
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Aurora_over_Northern_Ireland.jpg/1024px-Aurora_over_Northern_Ireland.jpg[,1024,576]
+
+.Rays across an arc aurora seen in Vancouver, Canada
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Aurora_Borealis_over_Vancouver_BC.jpg/511px-Aurora_Borealis_over_Vancouver_BC.jpg[,681,1024]
+
+.Divergence point of a coronal aurora seen in Cannon Falls, Minnesota
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2024-05-11_Aurora_Cannon_Falls%2C_MN_3_of_7.jpg/1024px-2024-05-11_Aurora_Cannon_Falls%2C_MN_3_of_7.jpg[,1024,576]
+--
+
+== Impact
+
+The storm negatively affected ground-based broadcasting and two-way radio communications, especially on the HF band and to a lesser extent, the VHF and UHF bands, because it prevented the ionosphere from forming and thus interfered with propagation.
+
+In Canada, power companies BC Hydro and Hydro-Québec stated that they had prepared for the storm, and monitored it as its ejecta struck Earth on 10–11 May. Unlike in 1989 where a previous solar storm caused a nine-hour long power outage in Québec, no outages were reported as a result of the storm's effects.
+
+In New Zealand, Transpower declared a grid emergency, and took some transmission lines out of service as a precaution against the storm.
+
+In the United States, telecommunications companies AT&T and T-Mobile stated that they were prepared to respond to disruptions in their networks, but it was predicted that significant impacts to cell service were unlikely because the networks rely on different frequencies than the HF bands affected by the solar storm. While the National Oceanic and Atmospheric Administration (NOAA) reported that there were power grid irregularities and degradation in GPS and high-frequency radio communications, both the Federal Emergency Management Agency (FEMA) and the United States Department of Energy reported no significant impacts to the population.
+
+Agricultural users of John Deere RTK GPS equipment reported significantly degraded positional accuracy during the geomagnetic storm. As the GPS receivers are used to guide tractors in precision agriculture, certain agricultural workers were forced to suspend planting activities entirely.
+
+Some aerial drone users flying during the storm experienced unusual behavior, including difficulty maintaining a stable hover, disruption of GPS signals, and in some cases a sudden loss of control which resulted in a crash. Drones rely on GPS and magnetic signals to maintain position during flight, which are affected by geomagnetic activity.
+
+At 00:19 UTC on May 13, the GOES-16 satellite, the primary operational geostationary weather satellite in the GOES East position, providing a view centered on the Americas, stopped transmitting all data. The transmission of data resumed nearly 2 hours later at 02:00 UTC. There was a second loss of data transmission shortly after, lasting 11 minutes from 03:19 UTC to 03:30 UTC.
+
+Other impacts to satellite services include Starlink's fleet of low-orbiting satellites, which experienced degraded service because of the intensity of the solar storms, but remained operational.

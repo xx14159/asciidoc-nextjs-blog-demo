@@ -1,0 +1,5 @@
+= Typeface Comparison
+author
+:page-public:
+
+link:https://typeface-comparison.otherx.blog/[Typeface Comparison^]: This is a toy website from long time ago. Use this to quickly check how some most famous typefaces differ from one another by comparing the most common glyphs.

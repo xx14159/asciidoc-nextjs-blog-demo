@@ -1,0 +1,8 @@
+= AsciiDoc 实时预览
+author
+:page-public:
+:lang: zh-Hans
+
+访问 link:/projects/asciidoc-post-preview[projects/asciidoc-post-preview] 即可在线预览用 AsciiDoc 撰写的文章。
+
+另外在网址后加上 `pid` query 参数可打开之前保存的文章，如 link:/projects/asciidoc-post-preview?pid=The-Fourier-Transform-explained-in-one-sentence[一句话解释傅里叶变换]。

@@ -43,7 +43,7 @@ const Page = () => {
     <article className="tw-mx-auto tw-max-w-screen-lg tw-pb-32 tw-pt-16">
       <HrTitle>PROJECTS</HrTitle>
 
-      <div className="tw-grid tw-grid-cols-1 tw-gap-x-8 tw-gap-y-6 tw-px-4 sm:tw-grid-cols-2 sm:tw-px-8 md:tw-px-12 lg:tw-grid-cols-3">
+      <div className="tw-grid tw-grid-cols-1 tw-gap-x-8 tw-gap-y-6 tw-pl-10 tw-pr-4 sm:tw-grid-cols-2 sm:tw-pl-20 sm:tw-pr-8 md:tw-pl-24 md:tw-pr-12 lg:tw-grid-cols-3">
         {projects
           .filter(({ showInProduction }) => dev || showInProduction)
           .map(({ name, link, description, color }) => (

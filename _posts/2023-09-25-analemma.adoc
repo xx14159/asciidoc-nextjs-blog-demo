@@ -1,0 +1,27 @@
+= Analemma——日行迹
+author
+:page-public:
+:page-tags: Astronomy
+:lang: zh-Hans
+
+如果每天在同一时间同一地点以同一角度拍摄太阳的位置，一年后就可以得到太阳的link:https://zh.wikipedia.org/zh-cn/%E6%97%A5%E8%A1%8C%E8%B7%A1[日行迹]。
+
+一个小的绘图项目：link:/projects/analemma[projects/analemma]。一开始是作为一门课的作业写的。处理流程：
+
+- 从 JPL 提供的link:https://ssd.jpl.nasa.gov/planets/eph_export.html[星历表]得到太阳相对地球的位置（使用 DE440 星历表，截取切比雪夫多项式的前七项）。考虑周年光行差后得到太阳在 ICRF 参考系中的赤经 stem:[\alpha] 和赤纬 stem:[\delta]。
+- 利用 https://iers-conventions.obspm.fr/content/chapter5/icc5.pdf 中的公式 5.15 得到 Earth Rotation Angle（ERA）
+- 再由公式 5.32 得到 Greenwich Mean Sidereal Time（GMST）
+- 得到时角 stem:[h = \mathrm{GMST} + \mathrm{Longitude} - \alpha]
+- 将赤经赤纬转换为地平坐标系中的方位角 stem:[\mathrm{Az}] 和高度角 stem:[\mathrm{Alt}]：
++
+[stem]
+++++
+\begin{align*}
+    \tan \mathrm{Az} &= \frac{\sin h}{\cos h \sin(\mathrm{Latitude}) - \tan \delta \cos(\mathrm{Latitude})} \,, \\
+    \sin \mathrm{Alt} &= \sin \delta \sin (\mathrm{Latitude}) + \cos \delta \cos (\mathrm{Latitude}) \cos h \,.
+\end{align*}
+++++
+
+但以上过程未考虑地球自转轴的进动、章动和极移等运动，也未对周日光行差、大气折射和光线的引力偏折等效应做校正，因此结果存在一些偏差。
+
+以上计算过程均在 rust 中实现，连同 1990 年至 2059 年的星历表一同编译在 WebAssembly 文件中，绘图使用 D3.js。
