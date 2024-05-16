@@ -30,6 +30,13 @@ const projects = [
     showInProduction: true,
   },
   {
+    name: "Some Components",
+    link: "/projects/some-components",
+    description: "Just some common reusable components built with React.",
+    color: colors.orange[300],
+    showInProduction: true,
+  },
+  {
     name: "AsciiDoc Post Preview",
     link: "/projects/asciidoc-post-preview",
     description: "Customized AsciiDoc parser for post previewing",
