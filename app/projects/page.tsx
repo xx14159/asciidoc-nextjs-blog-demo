@@ -33,7 +33,7 @@ const projects = [
     name: "Some Components",
     link: "/projects/some-components",
     description: "Just some common reusable components built with React.",
-    color: colors.orange[300],
+    color: colors.blue[300],
     showInProduction: true,
   },
   {

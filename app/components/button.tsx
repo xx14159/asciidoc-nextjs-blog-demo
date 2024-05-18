@@ -1,3 +1,5 @@
+"use client";
+
 import colors from "tailwindcss/colors";
 
 import { twGrays, twColors, colorVariant } from "@/app/lib/utils/color";
